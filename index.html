@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagtulun-an</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #097953;
+            /*background-image: url('universe.jpg');
+            background-repeat: repeat-y;
+            img {
+                width: 100%;
+                height: auto; 
+                }*/
+  
+            }
+
+    
+
+
+
+        #entry-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        input {
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+
+        /*NAV BAR*/
+        ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar {
+    float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+
+
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+}
+
+/*TITLE*/
+ .title {
+    text-align: center;
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+    
+
+<!--NAV BAR-->
+<ul id="navbar">
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">Branches</a></li>
+  <li><a href="#contact">Member List</a></li>
+  <li style="float:right"><a href="#about">About</a></li>
+  <li style="float:right"><a href="#about">History</a></li>
+  <li style="float:right"><a href="#about">Contact</a></li>
+</ul>
+
+    <div id="entry-modal">
+        <div class="modal-content">
+            <h2>Welcome</h2>
+            <h2>Authorize Person Only</h2>
+            <p>Please enter your username and password to proceed.</p>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="enterWebsite()">Enter</button>
+        </div>
+    </div>
+    <div class="title">
+        <h1>Pagtulun-an Gikan sa Dios nga Amahan</h1> 
+        <h1>nga Gidala ug Gipatun-an ni Senior Jesu-Cristo sa mga Katawhan, Inc.</h1>
+        <h3>(SEC. Reg. no. 011842)</h3>
+
+    </div>
+    <h4 style="color:blue; position: absolute;
+  bottom: 10px;
+  width: 50%;
+  border: 3px solid #8AC007;">This website is still under development. Sorry for the inconvenience.</h4>
+    <script>
+
+
+
+
+        function enterWebsite() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            
+            
+            if (username && password) {
+                 document.getElementById('entry-modal').style.display = 'none'
+            } else {
+                alert('Please enter both username and password.');
+            }
+                        
+             
+}
+    </script>
+            
+</body>
+</html>
